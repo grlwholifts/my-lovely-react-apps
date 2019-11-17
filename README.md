@@ -2,7 +2,7 @@
 
 Tryna learn react bcz atoms in my life don't.
 
-##Dear Github Repository, today I learnt : 
+## Dear Github Repository, today I learnt : 
 
 ### Day 1
 - the difference between ES5 and ES6 versions (contstructor/function method)
