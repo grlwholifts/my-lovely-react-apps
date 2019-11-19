@@ -5,14 +5,14 @@ Tryna learn react bcz atoms in my life don't.
 ## Dear Github Repository, today I learnt : 
 
 ### Day 1
-- the difference between ES5 and ES6 versions (contstructor/function method)
-- what is babel.js, webpack, ESlint
-- added node-modules, presets and plugins for development environment
-- converted a file from ES5 to ES6 using babel.js
-- couldn't update package.json, will try tomorrow
+- the difference between ES5 and ES6 versions (constructor/function method)
+- what is `babel.js`, `webpack`, `ESlint`
+- added `node-modules`, presets and plugins for local development environment (not using official React Environment by Facebook as of now)
+- converted a file `main.js` from ES5 to ES6 as `output.js` using babel transpiler
+- couldn't update `package.json` tho :P
 
 ### Day 2
-- how to set up my first react component using CDN, `production.min.js` and `babel standalone` on my local host
+- how to set up my first react component using CDN, `react.production.min.js`, `react-dom.production.min.js` and `babel standalone` on my local host
 - syntax of JSX, refers to JS + XML
 - working of `state()` and `render()` functions
 - inside `state()`: define properties of the UI, similiar to a class object properties in a basic JS class
@@ -25,3 +25,4 @@ Tryna learn react bcz atoms in my life don't.
 #### Resources for Day: 
 - [ https://addons.mozilla.org/en-US/firefox/addon/react-devtools/?src=search ] 
 - [ https://www.youtube.com/playlist?list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG ]
+- [ https://reactjs.org/docs/cdn-links.html ]
