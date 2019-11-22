@@ -32,3 +32,16 @@ Tryna learn react bcz atoms in my life don't.
 - introduction to forms in React, defining `input` types, buttons and responsiveness to the UI
 - preventing default action for a DOM event using `preventDefault()` function in JS, hence defining our own actions or response to the console
 - defining property/attribute to the whole form instead of the single button i.e. responding for both [ if a user clicks on `submit` button ] and [ user presses `enter` key ]
+
+### Day 4
+- using `create-react-app` to get the official React template and development server, up and running
+- it helps keep the code modular (nested components), has ES6 features by default, creates a development server and uses build tools to create optimized code
+- started building `my-lovely-react-app-1` as a Single Page App; renders `index.html` page only, other pages are loaded as components references from the initial page
+- removed _App.css, logo.svg, App.test.js_ and their references from _src_ folder to maintain simplicity
+- created first component `Ninjas.js`, hard-coded the <div> elements like _Name_
+- added `export default` to add the `import reference` to the `App.js` via RegEx addressing, nested using self closing HTML tag `<Ninjas />`
+- used `props` to define cross-component reference, using `this.props.<attribute>` in 
+- used `const` to define an array of above mentioned properties to be used locally in the specified component as `const { <x1>, <x2>, <x3> } = this.props;`
+
+#### Resources for Day: 
+- [ https://github.com/facebook/create-react-app ]
