@@ -45,3 +45,43 @@ Tryna learn react bcz atoms in my life don't.
 
 #### Resources for Day: 
 - [ https://github.com/facebook/create-react-app ]
+
+### Day 5
+im backkkk after a long time, finally yes
+- used props instead of harcoding helps to have a resuable set of data; it allows receiving of all the data just using one reference prop in each component; just like `App.js` defines data to be sent and `Ninjas.js`(component) receives all instances of that data by using props only once
+- outputted many instances of a same attritbutes in following ways: 
+	- either write each attribute set singly ( just like for each object in a class ) 
+	- or make a  list ( that will automatically output the data serially )
+- in `App`, used `state` method to make an array of prop-attributes to store the data instances serially; referred to these attributes by their collective name (`ninjas`) in `render` method to display on the DOM
+- in `Ninjas`, destructured props using `const` keyword to reference props-attributes sequentially in the component
+- used `maps` method to output the prop-list in a sequential manner 
+	- divided data into small html chunks of prop-attributes for each instance
+	- mapped them like objects using arrow function
+	- added a sequence identifier `key` using `id` attribute(any unique attirbute)
+
+#### Resources for Day: 
+- [ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
