@@ -54,7 +54,7 @@ im backkkk after a long time, finally yes
 	- or make a  list ( that will automatically output the data serially )
 - in `App`, used `state` method to make an array of prop-attributes to store the data instances serially; referred to these attributes by their collective name (`ninjas`) in `render` method to display on the DOM
 - in `Ninjas`, destructured props using `const` keyword to reference props-attributes sequentially in the component
-- used `maps` method to output the prop-list in a sequential manner 
+- used `map` method to output the prop-list in a sequential manner 
 	- divided data into small html chunks of prop-attributes for each instance
 	- mapped them like objects using arrow function
 	- added a sequence identifier `key` using `id` attribute(any unique attirbute)
@@ -62,26 +62,9 @@ im backkkk after a long time, finally yes
 #### Resources for Day: 
 - [ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment ]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Day 6
+- `container component` : contains state, contains lifecycle hooks, not concerned with UI, use classes to create, methods like render are available; `ui component` : doesn't contain state, receive data from props, only concerned with UI, use functions to create
+- for eg: for a form, use `container` to store data, for navbar, use `UI` to show styles and represent data for user
+- make a functional/ UI component (`Ninjas.js`) using `const` keyword and `arrow function`, passing `props` in that function and removing any state/render methods, `this` keyword (because no class is there) used previously
+- use conditional outputting to filter the props instances : if / ternary
+- improve the code formatting by wrapping dyanamic data under return method only
