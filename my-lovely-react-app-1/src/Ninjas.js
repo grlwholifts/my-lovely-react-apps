@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Ninjas extends Component{
-	render(){
+//class Ninjas extends Component{
+	//render(){
 	    //console.log(this.props);
 
 	    //<div>Name: {this.props.name}</div>
@@ -9,23 +9,45 @@ class Ninjas extends Component{
 		//<div>Belt: {this.props.belt}</div>
 
 	    //const { name, age, belt } = this.props;
-	    
-	    const { ninjas } = this.props;
-	    const ninjaList = ninjas.map(ninja => {
-	    	return(
-            	<div className="ninja" key={ninja.id}>
+
+const Ninjas = ({ninjas}) => {
+
+	const ninjaList = ninjas.map(ninja => {
+		if (ninja.age > 19){
+			return(
+		    	<div className="ninja" key={ninja.id}>
 			        <div>Name: {ninja.name}</div>
 			        <div>Age: {ninja.age}</div>
 			        <div>Belt: {ninja.belt}</div>
-	        	</div>
-	    	)
-	    })
-	    return(
-	    	<div className="ninja-list">
-	    		{ninjaList}
-	    	</div>
-	    )
-	}
+		    	</div>
+			)
+		} else {
+			return null
+		}
+	})
+	return(
+		<div className="ninja-list">
+			{ninjaList}
+		</div>
+	)
 }
+
+//optional code for ternary operator
+//const Ninjas = ({ninjas}) => {
+//	return(
+//		<div className="ninja-list">
+//			{
+//				ninjas.map(ninja => {
+//					return ninja.age > 20 ? (
+//				    	<div className="ninja" key={ninja.id}>
+//					        <div>Name: {ninja.name}</div>
+//					        <div>Age: {ninja.age}</div>
+//					        <div>Belt: {ninja.belt}</div>
+//				    	</div>
+//					) : null;
+//			}
+//		</div>
+//	)
+//}
 
 export default Ninjas
