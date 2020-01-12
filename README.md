@@ -88,4 +88,4 @@ im backkkk after a long time, finally yes
 - use CSS in React: either define each css file (with same name as each file) or use _index.css_ for all files
 
 #### Resources for Day: 
-- [ https://www.youtube.com/redirect?event=video_description&v=IZ34vkfr97s&q=https%3A%2F%2Fblog.pusher.com%2Fcss-modules-react%2F&redir_token=uqMkDII-95hHsdNib8iy4zIjg-x8MTU3ODc0NTM3MEAxNTc4NjU4OTcw ]
+- [ https://blog.pusher.com/css-modules-react/ ]
