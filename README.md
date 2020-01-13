@@ -89,3 +89,20 @@ im backkkk after a long time, finally yes
 
 #### Resources for Day: 
 - [ https://blog.pusher.com/css-modules-react/ ]
+
+### Day 8
+- Components in React have lifecycles; lifecycle methods: to have data at any level of app; Phases of React App: mounting, updating, unmounting
+- Methods: 
+    - constructor(): not necessary to call, sets state directly inside constructor 
+    - getDerivedStateFromProps(): enables component to update internal state for changes in state, triggers on first render; when we receive updates props, compares props to current state 
+    - shouldComponentUpdate: receives next props and next state, compare next with prev, return false if dont want to change; alternative: use pure components
+    - render(): takes jsx code and renders it to the DOM, only required method 
+    - getSnapshotBeforeUpdate(): read access to the DOM before change is committed, get current values and return that value in final update hook 
+    - componentDidMount(): fires on first render i.e. when component mounts, good place to get data from external database like Firebase
+    - componentDidUpdate(): get external data, don't update data inside this or you get a infinite loop
+    - componentDidUnmount(): fires when component is unmounted
+- creating new todo app :DDD -- added components, addition and deletion of todo's, added click events
+
+#### Resources for Day:
+[ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/ ]
+[ https://materializecss.com/getting-started.html ] 

@@ -1,9 +1,10 @@
 body {
     background: gold;
     transition: all 1s;
+    padding: 20px;
 }
 
 .ninjas form {
     background: white;
-    padding: 20px;
+    padding: 50px;
 }
