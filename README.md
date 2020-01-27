@@ -2,7 +2,7 @@
 
 Tryna learn react bcz atoms in my life don't.
 
-## Dear Github Repository, today I learnt : 
+## Dear Github Repository, today I learnt :
 
 ### Day 1
 - the difference between ES5 and ES6 versions (constructor/function method)
@@ -21,10 +21,10 @@ Tryna learn react bcz atoms in my life don't.
 - using `setState` to handle state in DOM events
 - learned the scope of `this` reference in the class
 - added events to the component using `arrow functions` and event variable
-- monitored the working of code using React Developer Tools add-on in Firefox 70 
+- monitored the working of code using React Developer Tools add-on in Firefox 70
 
-#### Resources for Day: 
-- [ https://addons.mozilla.org/en-US/firefox/addon/react-devtools/?src=search ] 
+#### Resources for Day:
+- [ https://addons.mozilla.org/en-US/firefox/addon/react-devtools/?src=search ]
 - [ https://www.youtube.com/playlist?list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG ]
 - [ https://reactjs.org/docs/cdn-links.html ]
 
@@ -40,26 +40,26 @@ Tryna learn react bcz atoms in my life don't.
 - removed _App.css, logo.svg, App.test.js_ and their references from _src_ folder to maintain simplicity
 - created first component `Ninjas.js`, hard-coded the <div> elements like _Name_
 - added `export default` to add the `import reference` to the `App.js` via RegEx addressing, nested using self closing HTML tag `<Ninjas />`
-- used `props` to define cross-component reference, using `this.props.<attribute>` in 
+- used `props` to define cross-component reference, using `this.props.<attribute>` in
 - used `const` to define an array of above mentioned properties to be used locally in the specified component as `const { <x1>, <x2>, <x3> } = this.props;`
 
-#### Resources for Day: 
+#### Resources for Day:
 - [ https://github.com/facebook/create-react-app ]
 
 ### Day 5
 im backkkk after a long time, finally yes
 - used props instead of hard-coding helps to have a reusable set of data; it allows receiving of all the data just using one reference prop in each component; just like `App.js` defines data to be sent and `Ninjas.js`(component) receives all instances of that data by using props only once
-- outputted many instances of a same attributes in following ways: 
-	- either write each attribute set singly ( just like for each object in a class ) 
+- outputted many instances of a same attributes in following ways:
+	- either write each attribute set singly ( just like for each object in a class )
 	- or make a  list ( that will automatically output the data serially )
 - in `App`, used `state` method to make an array of prop-attributes to store the data instances serially; referred to these attributes by their collective name (`ninjas`) in `render` method to display on the DOM
 - in `Ninjas`, destructured props using `const` keyword to reference props-attributes sequentially in the component
-- used `map` method to output the prop-list in a sequential manner 
+- used `map` method to output the prop-list in a sequential manner
 	- divided data into small html chunks of prop-attributes for each instance
 	- mapped them like objects using arrow function
 	- added a sequence identifier `key` using `id` attribute(any unique attribute)
 
-#### Resources for Day: 
+#### Resources for Day:
 - [ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment ]
 
 ### Day 6
@@ -87,17 +87,17 @@ im backkkk after a long time, finally yes
 - the virtual DOM compares the current and new changes received in the ninjas.js _jsx_ template as props and wherever it finds the difference, it updates to the DOM/browser
 - use CSS in React: either define each css file (with same name as each file) or use _index.css_ for all files
 
-#### Resources for Day: 
+#### Resources for Day:
 - [ https://blog.pusher.com/css-modules-react/ ]
 
 ### Day 8
 - Components in React have lifecycles; lifecycle methods: to have data at any level of app; Phases of React App: mounting, updating, unmounting
-- Methods: 
-    - constructor(): not necessary to call, sets state directly inside constructor 
-    - getDerivedStateFromProps(): enables component to update internal state for changes in state, triggers on first render; when we receive updates props, compares props to current state 
-    - shouldComponentUpdate: receives next props and next state, compare next with prev, return false if dont want to change; alternative: use pure components
-    - render(): takes jsx code and renders it to the DOM, only required method 
-    - getSnapshotBeforeUpdate(): read access to the DOM before change is committed, get current values and return that value in final update hook 
+- Methods:
+    - constructor(): not necessary to call, sets state directly inside constructor
+    - getDerivedStateFromProps(): enables component to update internal state for changes in state, triggers on first render; when we receive updates props, compares props to current state
+    - shouldComponentUpdate: receives next props and next state, compare _next_ with _prev_, return _false_ if don't want to change; alternative: use pure components
+    - render(): takes jsx code and renders it to the DOM, only required method
+    - getSnapshotBeforeUpdate(): read access to the DOM before change is committed, get current values and return that value in final update hook
     - componentDidMount(): fires on first render i.e. when component mounts, good place to get data from external database like Firebase
     - componentDidUpdate(): get external data, don't update data inside this or you get a infinite loop
     - componentDidUnmount(): fires when component is unmounted
@@ -105,4 +105,32 @@ im backkkk after a long time, finally yes
 
 #### Resources for Day:
 [ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/ ]
-[ https://materializecss.com/getting-started.html ] 
+[ https://materializecss.com/getting-started.html ]
+
+### Day 9
+- Todo app completed! UwU [ will add a whole app description in app's readme that will include features and all]
+- how webpages load? : Browser makes an initial request to the server to load `/home`, server responds with `index.html`
+- React is built to load single page applications : they help to decrease load time(no refreshing)
+- how do we load multiple page applications then?!
+		- the _app.js_ components sits as a base and all the components like _home.js, about.js_ load over it
+		- when request and the req doesnt go to server but is intercepted in between by the react router and
+		- stops request to going to server and injects the component we need over it(app.js) i.e. /about
+- starting new web-app MyPokeTimes! eee [ will add a whole app description in app's readme that will include features and all]
+- BrowserRouter uses `react-router-dom` module
+- it helps to load several components using _Route_ ( found in `react-router`) path in the _app.js_ component
+
+#### Resources for Day:
+[ - CDN link for _materializecss_ at: https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css ]
+
+### Day 10
+- use _NavLink_ and _Link_ from `react-router-dom` to stop sending requests to server; each page is not loaded again and again, but only the component is loaded
+- different from anchor tag [ <a> </a> ] in that way(doesn't reload)
+- using NavLink helps to show current/active state of the loaded page other than basic _a=href_ (as is shown using _Link_)in console --> this helps to add custom design using the available parameters to the current/active page
+
+### Day 11
+- Router attaches `props` info automatically to the components like "/contact"(which use _NavLink_); if we pass the `props` in Contact.js class component , the Router will automatically load the information to the console, eg:history (and other parameters)
+- BrowserRouter attaches property to the Route components only and not any other component like _Navbar_
+- redirect pages using `setTimeout(path, state)` function that takes two argument, 1: change of props via anonymous function, 2: time(in ms)
+
+### Day 12
+-  
