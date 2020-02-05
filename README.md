@@ -133,4 +133,42 @@ im backkkk after a long time, finally yes
 - redirect pages using `setTimeout(path, state)` function that takes two argument, 1: change of props via anonymous function, 2: time(in ms)
 
 ### Day 12
--  
+- higher order components help to wrap the components with superpowers
+-  `withRouter`--> (a _higher order component_ which gives access to various properties)
+- return `withRouter(navbar)` to wrap the component and apply the properties to that component --> _supercharged_ component
+
+### Day 13
+- `Rainbow.js` helps to randomize color selection from array and assign a random colour to the `About.js` component
+- `Rainbow.js` is a manually written HOC
+- it returns props and changed color of the class wrapped (in the original about.js, it gives about.js a new superpower)
+- in about.js, export is wrapped in Rainbow
+- using `routing` components --> programmable redirects
+
+#### Resources for Day:
+[ - https://reactjs.org/docs/higher-order-components.html ]
+
+### Day 14
+- rest api --> show dyanamic database to our users
+- _jsonplaceholder.com_ --> gives api endpoints to use in our apps
+- http request library : `axios` [ install as `npm install axios` ]
+- helps to go out and fetch data from an exernal Resources (could use `fetch` instead of axios
+)
+- use lifecycle hook `componnetdidmount` (refer axios parameters inside it) --> make `Home.js` a fucntional component to use lifecycle hook
+- `axios.get` is asynchronous--> takes some time to get database
+- return a `promise` which waits for a signal(of above request completion) and then loads the relevant stuff
+- `.then` method operates when you get a promise i.e. the job is complete --> is used inside `axios.get`
+- `response` from the `axios` is then sliced using `slice` --> show only relevant stuff
+- `data` property inside `response` object helps to add posts
+- `postlist` cycles through the list of posts (if they are present--> checks length) from state and puts them in cards seperately
+- part of URL that can change --> `route parameters`
+- usually see them on URL for indivisual records eg: _mysite.com/users/yoshi2k1_   _mycookingsite.com/recipes/2345_
+- in `app.js` we are expecting a _route path_ with dyanamic id like : `/:path_id` which will connect to the component `Post.js`
+- in `post.js`, we identify the `route param (here:id)` so that we can output the associated post to that id(route param)
+- use `props.match.params.<name of param>` to match that `post_id` in `componentDidMount` lifecycle hook
+- to output the certain post page for each post dyanamically, get the `post_id` dyanamically and associate the post with it
+- the `link` tag from `react-router-dom` helps to link the `span` title in `home.js` to the individual post page dyanamically
+- use `+` in `get` method of `axios` to fetch the exact id match from the posts
+- use the same logic as used in `home.js` to build the post page i.e. length and all 
+
+#### Resources for Day:
+[ - https://jsonplaceholder.typicode.com/posts ]
